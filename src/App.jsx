@@ -1,4 +1,9 @@
+import Menubar from "./components/Menubar";
 const App = () => {
-  return <div className="text-3xl font-bold underline">Hello Universe  </div>;
+  return (
+    <div>
+      <Menubar />
+    </div>
+  );
 };
 export default App;
