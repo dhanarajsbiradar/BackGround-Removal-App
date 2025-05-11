@@ -30,3 +30,28 @@ Use it anywhere — for resumes, e-commerce, or design projects.`,
     },
 ];
 export const categories = ["People", "Products", "Animals", "Cars", "Graphics"];
+export const plans = [{
+        id: "Basic",
+        name: "Basic Package",
+        price: 499,
+        credits: "100  credits",
+        description: "Basic  for business use",
+        popular: false,
+    },
+    {
+        id: "Premium",
+        name: "premium Package",
+        price: 899,
+        credits: "250  credits",
+        description: "Best  for business use",
+        popular: true,
+    },
+    {
+        id: "Ultimate",
+        name: "Ultimate Package",
+        price: 1499,
+        credits: "1000  credits",
+        description: "Basic  for enterprise use",
+        popular: false,
+    },
+];
