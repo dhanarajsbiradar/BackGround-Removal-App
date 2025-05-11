@@ -22,8 +22,10 @@ const Pricing = () => {
               key={plan.id}
               className={`relative pt-6 p-6 rounded-2xl transition-all duration-300 transform hover:-translate-y-2 ${
                 plan.popular
-                  ? "bg-white shadow-lg border border-purple-500"
-                  : "bg-gray-100 border border-gray-300"
+                  ? "bg-gradient-to-br from-purple-50 to-white shadow-lg border border-purple-400"
+                  : plan.id === "Basic"
+                  ? "bg-gradient-to-br from-gray-50 to-white border border-gray-300"
+                  : "bg-gradient-to-br from-indigo-50 to-white border border-indigo-300"
               }`}
             >
               {plan.popular && (

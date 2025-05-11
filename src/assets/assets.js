@@ -74,3 +74,20 @@ export const testimonials = [{
         handle: "@ coding_newbie",
     },
 ];
+export const FOOTER__CONSTANTS = [{
+        url: "https://facebook.com",
+        logo: "https://img.icons8.com/fluency/48/facebook-new.png",
+    },
+    {
+        url: "https://linkedin.com",
+        logo: "https://img.icons8.com/fluency/48/linkedin.png",
+    },
+    {
+        url: "https://instagram.com",
+        logo: "https://img.icons8.com/fluency/48/instagram-new.png",
+    },
+    {
+        url: "https://twitter.com",
+        logo: "https://img.icons8.com/fluency/48/twitter.png",
+    },
+];
