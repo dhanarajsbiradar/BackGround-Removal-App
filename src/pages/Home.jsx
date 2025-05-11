@@ -3,6 +3,7 @@ import BgRemovalSteps from "../components/BgRemovalSteps";
 import BgSlider from "../components/BgSlider";
 import Pricing from "../components/Pricing";
 import Testimonials from "../components/Testimonials";
+import TryNow from "../components/TryNow";
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
       <BgRemovalSteps />
 
       {/* Background removal slider section */}
-      <BgSlider /> 
+      <BgSlider />
 
       {/* Buy credits plan section */}
       <Pricing />
@@ -23,6 +24,8 @@ const Home = () => {
       <Testimonials />
 
       {/* Try now section */}
+      <TryNow />
+
       {/* Add a component here if planned */}
     </div>
   );
