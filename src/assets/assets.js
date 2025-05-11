@@ -1,9 +1,12 @@
 import logo from "./logo.png";
 import video_banner from "./home-page-banner.mp4";
-
+import people from './people.png';
+import people_org from './people-org.jpeg';
 export const assets = {
     logo,
     video_banner,
+    people,
+    people_org,
 };
 
 export const steps = [{
@@ -26,3 +29,4 @@ You don't need to do anything manually — it's fully automatic.`,
 Use it anywhere — for resumes, e-commerce, or design projects.`,
     },
 ];
+export const categories = ["People", "Products", "Animals", "Cars", "Graphics"];
