@@ -1,14 +1,10 @@
 import { useAuth, useUser } from "@clerk/clerk-react";
-import { useContext, useEffect, useState } from "react";
-import { AppContext } from "../context/AppContext";
-import axios from "axios";
-import toast from "react-hot-toast";
+import { useEffect, useState } from "react";
 
 const UserSyncHandler = () => {
-  const { isLoaded, isSignedIn, getToken } = useAuth();
+  const { isLoaded, isSignedIn } = useAuth();
   const { user } = useUser();
   const [synced, setSynced] = useState(false);
-  const { backendUrl } = useContext(AppContext);
 
   useEffect(() => {
     const saveUser = async () => {
@@ -17,8 +13,7 @@ const UserSyncHandler = () => {
       }
 
       try {
-        const token = await getToken();
-
+        // Only collect user data, no backend request
         const userData = {
           clerkId: user.id,
           email: user.primaryEmail?.emailAddress,
@@ -26,22 +21,18 @@ const UserSyncHandler = () => {
           lastName: user.lastName,
         };
 
-        await axios.post(`${backendUrl}/users`, userData, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        console.log("User synced locally (no backend):", userData);
 
         setSynced(true);
-        // TODO : update the user credits
+        // Optionally update credits or UI state here
       } catch (error) {
-        console.error("User sync failed", error);
-        toast.error("User sync failed. Please try again");
+        console.error("User sync error:", error);
+        // No toast shown since no backend
       }
     };
 
     saveUser();
-  }, [isLoaded, isSignedIn, getToken, user, synced, backendUrl]);
+  }, [isLoaded, isSignedIn, user, synced]);
 
   return null;
 };
